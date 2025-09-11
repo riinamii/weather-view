@@ -1,0 +1,108 @@
+body {
+  background-image: url("https://images.pexels.com/photos/5084447/pexels-photo-5084447.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  /* background: linear-gradient(to top, #e0f2ff, #c2dfff, #b3d6ff, #a3cdff); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main,
+.search-form {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+main {
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+}
+
+footer {
+  margin-top: auto;
+}
+
+a {
+  color: rgb(92, 19, 88);
+}
+.weather-app {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 80px;
+}
+
+.search-form {
+  display: flex;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 16px 24px;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: #313131;
+}
+
+.search-input:placeholder {
+  color: #838383;
+}
+
+.search-btn {
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  color: #535353;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms ease-in-out;
+}
+
+.search-btn:hover {
+  color: #0a0a0a;
+}
+
+.main-icon {
+  align-self: center;
+  font-size: 90px;
+  position: relative;
+  left: -40px;
+}
+.current-temp {
+  font-weight: 900;
+  font-size: 40px;
+}
+.degree {
+  font-size: 30px;
+  position: relative;
+  top: -6px;
+}
+
+.details {
+  margin-top: 10px;
+}
+.details strong {
+  color: rgb(92, 19, 88);
+  line-height: 1.5;
+}
