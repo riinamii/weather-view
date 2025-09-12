@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="src/style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
     />
     <title>Weather Now</title>
   </head>
@@ -21,7 +27,7 @@
             required
           />
           <button type="submit" class="search-btn">
-            <i class="fas fa-search"></i>
+            <span class="material-symbols-outlined"> search </span>
           </button>
         </form>
       </header>
@@ -33,14 +39,18 @@
             <br />
             September 10, 2025
           </h3>
-          <p>Current Time: 11:30</p>
+          <p class="current-time">
+            Current Time: 11:30
+            <br />
+            Clear sky
+          </p>
         </div>
-        <div class="main-icon">⛅</div>
+        <div class="main-icon">☀️</div>
         <div class="current-weather">
-          <span class="current-temp">18</span><span class="degree">°C</span>
-          <br />
-          <em>light intensity drizzle</em>
+          <span class="current-temp">18</span><span class="degrees">°C</span>
           <div class="details">
+            Feels like : <strong>17°C</strong>
+            <br />
             Humidity: <strong>79%</strong>
             <br />
             Pressure: <strong>1020hPa</strong>
