@@ -11,14 +11,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "Nunito", sans-serif;
 }
 
 main,
 .search-form {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.35);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -27,15 +27,20 @@ main {
   padding: 30px;
   border-radius: 16px;
   display: flex;
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: center;
 }
 
 h1 {
   margin: 0;
+  font-size: 36px;
 }
 
 footer {
   margin-top: auto;
+  text-align: center;
+  color: #585858;
+  font-family: monospace;
 }
 
 a {
@@ -44,7 +49,7 @@ a {
 .weather-app {
   width: 100%;
   max-width: 600px;
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .search-form {
@@ -82,27 +87,36 @@ a {
 .search-btn:hover {
   color: #0a0a0a;
 }
-
+.current-time {
+  line-height: 1.5;
+}
 .main-icon {
   align-self: center;
-  font-size: 90px;
+  font-size: 80px;
   position: relative;
-  left: -40px;
+  left: -50px;
+  bottom: -1px;
 }
 .current-temp {
-  font-weight: 900;
-  font-size: 40px;
+  font-weight: 700;
+  font-size: 52px;
 }
-.degree {
+.degrees {
   font-size: 30px;
   position: relative;
-  top: -6px;
+  top: -15px;
 }
 
 .details {
-  margin-top: 10px;
+  line-height: 1.8;
 }
+
 .details strong {
-  color: rgb(92, 19, 88);
-  line-height: 1.5;
+  color: rgb(235, 0, 129);
+}
+
+@media screen and (max-width: 480px) {
+  .main-icon {
+    left: -10px;
+  }
 }
