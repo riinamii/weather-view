@@ -27,8 +27,7 @@ main {
   padding: 30px;
   border-radius: 16px;
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 h1 {
@@ -94,7 +93,7 @@ a {
   align-self: center;
   font-size: 80px;
   position: relative;
-  left: -50px;
+  left: -20px;
   bottom: -1px;
 }
 .current-temp {
@@ -118,5 +117,8 @@ a {
 @media screen and (max-width: 480px) {
   .main-icon {
     left: -10px;
+  }
+  .details {
+    line-height: 1.5;
   }
 }
