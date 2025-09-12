@@ -14,16 +14,18 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <title>Weather Now</title>
   </head>
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city..."
             class="search-input"
+            id="search-input"
             required
           />
           <button type="submit" class="search-btn">
@@ -33,7 +35,7 @@
       </header>
       <main>
         <div>
-          <h1>Odesa, Ukraine</h1>
+          <h1><span id="city">Odesa</span></h1>
           <h3>
             Wednesday,
             <br />
@@ -42,20 +44,20 @@
           <p class="current-time">
             Current Time: 11:30
             <br />
-            Clear sky
+            <span id="description">Clear sky</span>
           </p>
         </div>
         <div class="main-icon">☀️</div>
         <div class="current-weather">
           <span class="current-temp">18</span><span class="degrees">°C</span>
           <div class="details">
-            Feels like : <strong>17°C</strong>
+            Feels like : <strong><span id="feels-like">17</span>°C</strong>
             <br />
-            Humidity: <strong>79%</strong>
+            Humidity: <strong><span id="humidity">79</span>%</strong>
             <br />
-            Pressure: <strong>1020hPa</strong>
+            Pressure: <strong><span id="pressure">1020</span>hPa</strong>
             <br />
-            Wind: <strong>5km/h</strong>
+            Wind: <strong><span id="wind">5</span>km/h</strong>
           </div>
         </div>
       </main>
@@ -72,5 +74,6 @@
         <a href="#" target="_blank">hosted on Netlify</a>
       </p>
     </footer>
+    <script src="src/index.js"></script>
   </body>
 </html>
