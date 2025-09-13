@@ -27,15 +27,68 @@ function showWeather(response) {
   currentDescription.innerHTML = description;
 }
 
-function search(event) {
-  event.preventDefault();
-  let cityElement = document.querySelector("#search-input");
-  let city = cityElement.value;
+function search(city) {
   let apiKey = "7f03aa8a08ac7784t49974b7b793o240";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
   axios.get(apiUrl).then(showWeather);
 }
 
+function handleSearch(event) {
+  event.preventDefault();
+  let cityElement = document.querySelector("#search-input");
+
+  search(cityElement.value);
+}
+
+function getCurrentDate() {
+  let date = new Date();
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  let day = days[date.getDay()];
+  let month = months[date.getMonth()];
+  let year = date.getFullYear();
+  let dayOfMonth = date.getDate();
+
+  let hours = date.getHours().toString().padStart(2, "0");
+  let minutes = date.getMinutes().toString().padStart(2, "0");
+
+  let currentDay = document.querySelector("#current-day");
+  let currentDate = document.querySelector("#current-date");
+  let currentTime = document.querySelector("#current-time");
+
+  currentDay.innerHTML = `${day}`;
+  currentDate.innerHTML = `${month} ${dayOfMonth}, ${year}`;
+  currentTime.innerHTML = `${hours}:${minutes}`;
+}
+
+getCurrentDate();
+
 let searchFormElement = document.querySelector("#search-form");
-searchFormElement.addEventListener("submit", search);
+searchFormElement.addEventListener("submit", handleSearch);
+
+search("Odesa");
