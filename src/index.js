@@ -86,6 +86,7 @@ function getCurrentDate() {
   currentTime.innerHTML = `${hours}:${minutes}`;
 }
 
+setInterval(getCurrentDate, 60000);
 getCurrentDate();
 
 let searchFormElement = document.querySelector("#search-form");
