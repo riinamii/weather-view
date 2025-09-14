@@ -1,12 +1,25 @@
 body {
-  background-image: url("https://images.pexels.com/photos/5084447/pexels-photo-5084447.jpeg");
+  background-image: linear-gradient(
+    to left top,
+    #afa0fa,
+    #9ab5ff,
+    #92c7ff,
+    #99d6fe,
+    #aee3f8,
+    #acdfee,
+    #aadbe5,
+    #aad6dc,
+    #8bc3ca,
+    #6bb1b9,
+    #489ea8,
+    #128c97
+  );
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0;
   padding: 20px;
   min-height: 100vh;
-  /* background: linear-gradient(to top, #e0f2ff, #c2dfff, #b3d6ff, #a3cdff); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +80,7 @@ a {
   color: #313131;
 }
 
-.search-input:placeholder {
+.search-input::placeholder {
   color: #838383;
 }
 
