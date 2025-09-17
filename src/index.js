@@ -131,7 +131,25 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHtml;
 }
 
+function changeTheme() {
+  let body = document.querySelector("body");
+
+  body.classList.toggle("dark");
+}
+
+function setTime() {
+  let body = document.querySelector("body");
+  let now = new Date();
+  if (now.getHours() >= 19 || now.getHours() < 6) {
+    body.classList.add("dark");
+  }
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearch);
 
+let themeButton = document.querySelector(".theme-toggle");
+themeButton.addEventListener("click", changeTheme);
+
+setTime();
 search("Odesa");
