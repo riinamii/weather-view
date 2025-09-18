@@ -35,30 +35,42 @@
         <button class="theme-toggle"></button>
       </header>
       <main>
-        <div>
-          <h1><span id="city"></span></h1>
-          <h3>
-            <span id="current-day"></span>,
-            <br />
-            <span id="current-date"></span>
-          </h3>
-          <p class="current-time">
-            Current Time: <span id="current-time"></span>
-            <br />
-            <span id="description"></span>
-          </p>
-        </div>
-        <div class="main-icon"></div>
         <div class="current-weather">
-          <span class="current-temp"></span><span class="degrees">°C</span>
-          <div class="details">
-            Feels like : <strong><span id="feels-like"></span>°C</strong>
-            <br />
-            Humidity: <strong><span id="humidity"></span>%</strong>
-            <br />
-            Pressure: <strong><span id="pressure"></span>hPa</strong>
-            <br />
-            Wind: <strong><span id="wind"></span>km/h</strong>
+          <div class="weather-left">
+            <h1><span id="city"></span></h1>
+            <h3>
+              <span id="current-day"></span>,
+              <br />
+              <span id="current-date"></span>
+            </h3>
+            <p class="current-time">
+              Current Time: <span id="current-time"></span>
+              <br />
+              <span id="description"></span>
+            </p>
+          </div>
+          <div class="weather-center">
+            <div class="main-icon"></div>
+            <div class="temperature">
+              <span class="current-temp"></span><span class="degrees">°C</span>
+            </div>
+          </div>
+          <div class="weather-right">
+            <h4>Weather Details</h4>
+            <div class="details">
+              <div>
+                Feels like : <strong><span id="feels-like"></span>°C</strong>
+              </div>
+              <div>
+                Humidity: <strong><span id="humidity"></span>%</strong>
+              </div>
+              <div>
+                Pressure: <strong><span id="pressure"></span>hPa</strong>
+              </div>
+              <div>
+                Wind: <strong><span id="wind"></span>km/h</strong>
+              </div>
+            </div>
           </div>
         </div>
       </main>
